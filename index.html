@@ -20,11 +20,12 @@
     };
 
     document.getElementById('minus').onclick = () => {
-      counter--;
-      update();
+      if(counter > 0) {
+        counter--;
+        update();
+      }
     };
-
-
+    
     function update(){
       document.getElementById('counter').innerText = counter;
     }
