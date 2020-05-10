@@ -1,6 +1,16 @@
 // state
 let counter = 0;
+function setCounter(c) {
+  counter = c;
+  update();
+}
+
 let isRunning = false;
+
+function setIsRunning(ir) {
+  isRunning = ir;
+  update();
+}
 
 
 // initial actions
@@ -8,22 +18,18 @@ update();
 
 document.getElementById('plus').onclick = () => {
   if(isRunning) {
-    counter++;
+    setCounter(counter + 1);
   }
-
-  update();
 };
 
 document.getElementById('start').onclick = () => {
-  isRunning = true;
-  counter =  0;
+  setIsRunning(true);
+  setCounter(0);
+
   setTimeout(() => {
-    isRunning = false;
-    update();
+    setIsRunning(false);
     alert(`Your result ${counter}`);
   },10000);
-
-  update();
 };
 
 
