@@ -1,12 +1,23 @@
 // state
+let record = 0;
+function setRecord(r){
+  record = r;
+  update();
+}
+
 let counter = 0;
 function setCounter(c) {
   counter = c;
+
+  if(counter > record) {
+    setRecord(counter);
+    return;
+  }
+
   update();
 }
 
 let isRunning = false;
-
 function setIsRunning(ir) {
   isRunning = ir;
   update();
@@ -23,13 +34,15 @@ document.getElementById('plus').onclick = () => {
 };
 
 document.getElementById('start').onclick = () => {
-  setIsRunning(true);
-  setCounter(0);
+  if(!isRunning) {
+    setIsRunning(true);
+    setCounter(0);
 
-  setTimeout(() => {
-    setIsRunning(false);
-    alert(`Your result ${counter}`);
-  },10000);
+    setTimeout(() => {
+      setIsRunning(false);
+      alert(`Your result ${counter}, your record ${record}`);
+    },10000);
+  }
 };
 
 
