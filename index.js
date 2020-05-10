@@ -1,7 +1,10 @@
+'use strict';
+
 // state
 let record = 0;
 function setRecord(r){
   record = r;
+  window.localStorage.setItem('record', record);
   update();
 }
 
@@ -25,8 +28,18 @@ function setIsRunning(ir) {
 
 
 // initial actions
+const localStorageRecord = window.localStorage.getItem('record');
+
+if(!localStorageRecord) {
+  record = 0;
+} else {
+  record = localStorageRecord;
+}
+
 update();
 
+
+// set listeners
 document.getElementById('plus').onclick = () => {
   if(isRunning) {
     setCounter(counter + 1);
@@ -51,3 +64,4 @@ function update(){
   document.getElementById('page').style.backgroundColor = isRunning ? '#81ecec' : 'white';
   document.getElementById('counter').innerText = counter;
 }
+
