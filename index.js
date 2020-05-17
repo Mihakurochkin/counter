@@ -1,6 +1,12 @@
 'use strict';
 
 // state
+let showModal = false;
+function setShowModal(value) {
+  showModal = value;
+  update();
+}
+
 let record = 0;
 function setRecord(r){
   record = r;
@@ -53,14 +59,20 @@ document.getElementById('start').onclick = () => {
 
     setTimeout(() => {
       setIsRunning(false);
-      alert(`Your result ${counter}, your record ${record}`);
+      setShowModal(true);
     },10000);
   }
+};
+
+document.getElementById('page').onkeydown = () => {
+  console.log('textbla');
+  setShowModal(false);
 };
 
 
 // update functions
 function update(){
+  document.getElementById('modal').style.display = showModal ? 'flex' : 'none';
   document.getElementById('page').style.backgroundColor = isRunning ? '#55efc4' : '#dfe6e9';
   document.getElementById('counter').innerText = counter;
   document.getElementById('line').style.transition = isRunning ? 'width 10s linear' : 'width 0s linear';

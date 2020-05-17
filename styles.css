@@ -114,14 +114,24 @@
     border: 1px solid red;
     height: 100%;
     width: 100%;
-    display: none;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.82);
 }
 
 #modal-text {
+    margin: 0;
     width: 100%;
-    padding-top: 200px;
+    padding-top: 130px;
     font-size: 70px;
+    color: #dfe6e9;
+    text-align: center;
+    text-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+}
+
+#modal-description {
+    padding: 10px;
+    font-size: 23px;
+    margin: 0;
     color: #dfe6e9;
     text-align: center;
     text-shadow: 5px 5px 0 rgba(0,0,0,0.5);
