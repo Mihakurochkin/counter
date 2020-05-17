@@ -65,16 +65,23 @@ document.getElementById('start').onclick = () => {
 };
 
 document.getElementById('page').onkeydown = () => {
-  console.log('textbla');
   setShowModal(false);
 };
 
 
 // update functions
 function update(){
-  document.getElementById('modal').style.display = showModal ? 'flex' : 'none';
   document.getElementById('page').style.backgroundColor = isRunning ? '#55efc4' : '#dfe6e9';
   document.getElementById('counter').innerText = counter;
+
+  // progress line
   document.getElementById('line').style.transition = isRunning ? 'width 10s linear' : 'width 0s linear';
   document.getElementById('line').style.width = isRunning ? '100%' : '0%';
+
+  // modal
+  document.getElementById('modal').style.display = showModal ? 'flex' : 'none';
+  document.getElementById('your-score').innerText = counter === record ? `New best score is ${record}!`
+    : `Your score is ${counter}`;
+  document.getElementById('best-score').innerText = counter !== record ? `best score is ${record}` : '';
+  document.getElementById('best-score').style.display = counter !== record ? 'block' : 'none';
 }

@@ -114,11 +114,13 @@
     border: 1px solid red;
     height: 100%;
     width: 100%;
+    display: none;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.82);
+    text-align: center;
 }
 
-#modal-text {
+#your-score {
     margin: 0;
     width: 100%;
     padding-top: 130px;
@@ -128,7 +130,7 @@
     text-shadow: 5px 5px 0 rgba(0,0,0,0.5);
 }
 
-#modal-description {
+.modal-description {
     padding: 10px;
     font-size: 23px;
     margin: 0;
