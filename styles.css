@@ -85,7 +85,7 @@
 #plus:active {
      width: 132px;
     height: 132px;
- }
+}
 
 #start {
     width: 230px;
@@ -105,4 +105,22 @@
     box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
     margin-top: 5px;
     margin-left: 10px;
+}
+
+#modal {
+    position: fixed;
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+#modal-text {
+    width: 100%;
+    padding-top: 200px;
+    font-size: 70px;
+    color: #dfe6e9;
+    text-align: center;
+    text-shadow: 5px 5px 0 rgba(0,0,0,0.5);
 }
