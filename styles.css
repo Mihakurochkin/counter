@@ -1,5 +1,5 @@
 * {
-    font-family: "Arial Black";
+    font-family: "Arial Black", serif;
 }
 
 #page{
@@ -98,9 +98,11 @@
     color: #2d3436;
     box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
 }
+
 #start:focus{
     outline: 0;
 }
+
 #start:active {
     box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
     margin-top: 5px;
