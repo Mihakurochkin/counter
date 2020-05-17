@@ -40,7 +40,7 @@ update();
 
 
 // set listeners
-document.getElementById('plus').onclick = () => {
+document.getElementById('button-container').onclick = () => {
   if(isRunning) {
     setCounter(counter + 1);
   }

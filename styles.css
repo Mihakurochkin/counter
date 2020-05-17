@@ -60,7 +60,7 @@
 }
 
 #button-border {
-    padding: 3px;
+    padding: 5px;
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -75,11 +75,17 @@
     background-color: #ff4757;
     width: 140px;
     height: 140px;
+    transition: all 60ms ease-out;
 }
 
 #plus:focus{
     outline: 0;
 }
+
+#plus:active {
+     width: 132px;
+    height: 132px;
+ }
 
 #start {
     width: 230px;
@@ -90,7 +96,13 @@
     border: none;
     border-radius: 15px;
     color: #2d3436;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
 }
 #start:focus{
     outline: 0;
+}
+#start:active {
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+    margin-top: 5px;
+    margin-left: 10px;
 }
