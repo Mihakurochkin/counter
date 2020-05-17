@@ -66,4 +66,3 @@ function update(){
   document.getElementById('line').style.transition = isRunning ? 'width 10s linear' : 'width 0s linear';
   document.getElementById('line').style.width = isRunning ? '100%' : '0%';
 }
-

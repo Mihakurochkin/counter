@@ -1,3 +1,7 @@
+* {
+    font-family: "Arial Black";
+}
+
 #page{
     display: flex;
     flex-direction: column;
@@ -24,6 +28,7 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    padding-top: 29px;
 }
 
 .title {
@@ -77,13 +82,14 @@
 }
 
 #start {
-    width: 200px;
+    width: 230px;
     font-size: 50px;
     font-weight: 400;
-    height: 100px;
-    background-color: #1dc637;
+    height: 90px;
+    background-color: #00b894;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
+    color: #2d3436;
 }
 #start:focus{
     outline: 0;
