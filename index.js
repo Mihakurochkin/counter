@@ -61,7 +61,7 @@ document.getElementById('start').onclick = () => {
 
 // update functions
 function update(){
-  document.getElementById('page').style.backgroundColor = isRunning ? '#81ecec' : 'white';
+  document.getElementById('page').style.backgroundColor = isRunning ? '#55efc4' : '#dfe6e9';
   document.getElementById('counter').innerText = counter;
   document.getElementById('line').style.transition = isRunning ? 'width 10s linear' : 'width 0s linear';
   document.getElementById('line').style.width = isRunning ? '100%' : '0%';
