@@ -1,5 +1,6 @@
 * {
     font-family: "Arial Black", serif;
+    cursor: default;
 }
 
 #page{
@@ -97,6 +98,7 @@
     border-radius: 15px;
     color: #2d3436;
     box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
 }
 
 #start:focus{
