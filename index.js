@@ -72,7 +72,7 @@ document.getElementById('page').onkeydown = () => {
 // update functions
 function update(){
   document.getElementById('page').style.backgroundColor = isRunning ? '#55efc4' : '#dfe6e9';
-  document.getElementById('counter').innerText = counter;
+  document.getElementById('counter').innerText = isRunning || showModal ? counter : 0;
 
   // progress line
   document.getElementById('line').style.transition = isRunning ? 'width 10s linear' : 'width 0s linear';
