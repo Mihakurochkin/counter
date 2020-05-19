@@ -56,10 +56,17 @@ document.getElementById('start').onclick = () => {
   if(!isRunning) {
     setIsRunning(true);
     setCounter(0);
+    document.getElementById('run-audio').play();
 
     setTimeout(() => {
       setIsRunning(false);
       setShowModal(true);
+      document.getElementById('run-audio').pause();
+      document.getElementById('run-audio').currentTime = 0;
+
+      if(record === counter) {
+        document.getElementById('win-audio').play();
+      }
     },10000);
   }
 };
